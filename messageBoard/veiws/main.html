@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard Template for Bootstrap</title>
+  <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/public/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <h1 class="page-header">Dashboard</h1>
+        <h2 class="sub-header">Section title</h2>
+        <div class="table-responsive">
+          <a href="./veiws/add.html"><button type="button" name="button">add</button></a>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>name</th>
+                <th>massage</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{ each person }}
+              <tr>
+                <td>{{$value.id}}</td>
+                <td>{{$value.name}}</td>
+                <td>{{$value.massage}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
